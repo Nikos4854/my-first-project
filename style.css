@@ -166,3 +166,20 @@ footer a {
 .lang-switch a:hover {
     color: #c8a97e;
 }
+@media (max-width: 768px) {
+  /* Κάνε τις στήλες/διατάξεις να μπαίνουν η μία κάτω από την άλλη */
+  .container, .row, .products-grid {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Προσάρμοσε το μέγεθος γραμματοσειράς */
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  /* Προσάρμοσε περιθώρια για να μην κολλάνε στα άκρα της οθόνης */
+  body {
+    padding: 10px;
+  }
+}
