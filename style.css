@@ -1,0 +1,168 @@
+/* Βασική Επαναφορά (Reset) για ομοιόμορφη εμφάνιση */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ρυθμίσεις Σώματος (Body) */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdfbf7; /* Ένα πολύ απαλό, ζεστό κρεμ χρώμα */
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Επικεφαλίδα και Λογότυπο */
+header {
+    background-color: #1a365d; /* Το βαθύ μπλε του λογότυπου */
+    text-align: center;
+    padding: 30px 0;
+    border-bottom: 5px solid #c8a97e;/* Χρυσή γραμμή στο κάτω μέρος */
+    position: relative; 
+}
+
+/* Μενού Πλοήγησης */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #c8a97e; /* Όταν το ποντίκι πάει πάνω, γίνεται χρυσό */
+}
+
+/* Κυρίως Περιεχόμενο (Main) */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    color: #1a365d;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+h2 {
+    color: #1a365d;
+    margin-bottom: 15px;
+}
+
+/* Κουτιά (Sections) για Προϊόντα & Πληροφορίες */
+section {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #c8a97e;
+}
+
+/* Εικόνες */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Πίνακας Διατροφικής Αξίας */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #1a365d;
+    color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Φόρμα Επικοινωνίας */
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+input[type="submit"] {
+    background-color: #c8a97e;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #b5956a;
+}
+
+/* Υποσέλιδο (Footer) */
+footer {
+    background-color: #1a365d;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #c8a97e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Κουμπί Αλλαγής Γλώσσας */
+.lang-switch {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.lang-switch a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.lang-switch a.active {
+    color: #c8a97e; /* Χρυσό χρώμα για τη γλώσσα που διαβάζουμε τώρα */
+}
+
+.lang-switch a:hover {
+    color: #c8a97e;
+}
