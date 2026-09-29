@@ -166,25 +166,116 @@ footer a {
 .lang-switch a:hover {
     color: #c8a97e;
 }
-@media (max-width: 768px) {
-  /* Κάνε τις στήλες/διατάξεις να μπαίνουν η μία κάτω από την άλλη */
-  .container, .row, .products-grid {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  /* Προσάρμοσε το μέγεθος γραμματοσειράς */
-  h1 {
-    font-size: 1.8rem;
-  }
-  
-  /* Προσάρμοσε περιθώρια για να μην κολλάνε στα άκρα της οθόνης */
-  body {
-    padding: 10px;
-  }
+/* ========================================================
+   1. ΒΑΣΙΚΟΙ ΚΑΝΟΝΕΣ ΓΙΑ ΝΑ ΜΗΝ ΞΕΧΕΙΛΙΖΕΙ ΤΙΠΟΤΑ
+   ======================================================== */
+*, *::before, *::after {
+    box-sizing: border-box; /* Υπολογίζει σωστά τα περιθώρια χωρίς να ξεχειλίζουν */
 }
+
+body {
+    margin: 0;
+    padding: 0 15px; /* Αφήνει λίγο αέρα αριστερά και δεξιά */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+}
+
+/* Όλες οι εικόνες προσαρμόζονται στο πλάτος της οθόνης */
 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========================================================
+   2. HEADER & MENU ΓΙΑ ΟΛΕΣ ΤΙΣ ΣΥΣΚΕΥΕΣ
+   ======================================================== */
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+header img {
+    margin: 10px auto; /* Κεντράρει το λογότυπο */
+}
+
+/* Το μενού πλοήγησης */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Αν δεν χωράνε, κατεβαίνουν αυτόματα γραμμή */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 6px 10px;
+    display: inline-block;
+}
+
+/* ========================================================
+   3. ΠΡΟΣΑΡΜΟΓΕΣ ΕΙΔΙΚΑ ΓΙΑ SMARTPHONES (Κάτω από 768px)
+   ======================================================== */
+@media (max-width: 768px) {
+    /* Τα links του μενού γίνονται σαν άνετα κουμπιά για άγγιγμα */
+    nav ul {
+        flex-direction: column; /* Το ένα κάτω από το άλλο */
+        gap: 8px;
+    }
+
+    nav ul li a {
+        background-color: #f4f4f4;
+        border-radius: 6px;
+        display: block;
+        padding: 10px;
+    }
+
+    /* Ο χάρτης του Google Maps (contact.html) να μην ξεχειλίζει */
+    iframe {
+        width: 100% !important;
+        height: 300px !important;
+        border-radius: 8px;
+    }
+
+    /* Η φόρμα επικοινωνίας πιάνει όλο το πλάτος */
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100% !important;
+        box-sizing: border-box;
+        padding: 10px;
+        font-size: 16px; /* Αποτρέπει το αυτόματο zoom στο iPhone κατά το κλικ */
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        background-color: #5c3d2e;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    /* Ο πίνακας θερμίδων (nutrition.html) να προσαρμόζεται */
+    table {
+        width: 100% !important;
+        font-size: 14px;
+    }
+
+    /* Τα sections των προϊόντων (products.html) */
+    main section {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    main section img {
+        margin: 0 auto 15px auto;
+    }
 }
